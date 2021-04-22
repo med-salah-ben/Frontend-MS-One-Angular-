@@ -1,0 +1,65 @@
+<div class="col card">
+  <div class="card">
+    <div class="card-header shadow-sm bg-white">
+      <h2 class="card-title text-uppercase text-sm text-center">
+       Liste des Personnes Physiques
+       <button class="btn btn-outline-info btn-sm text-right ml-3"
+       (click)="AjouterEnergy()">
+       <i class="mdi mdi-playlist-plus btn-icon-append"></i>
+      </button>
+      </h2>
+    </div>
+  </div>
+
+<!-- <h2></h2> -->
+
+    <ul class="Personnes">
+        <li>
+          <span class="badge"></span> 
+        </li> 
+  <div class="card-body">
+    <table id="example1" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>nom</th>
+      <th>prenom</th>
+      <th>Date de Naissance  </th>
+      <th> Lieu</th>
+      <th>Nature</th>
+      <th> Classe</th>
+      <th> Telephone</th>
+      <th>Cin </th>
+      <th>DelivreCin </th>
+      <th>LieuCin</th>
+      <th>MatriculeFiscal</th>
+      <th> AdressePhysique</th>
+      <th>Siege</th>
+      <th>MentionEnregistrement</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let personne of personneList">
+      
+      <td>{{personne.nomRaisonSocial}}</td>
+      
+      <td>{{personne.prenom}}</td>
+     
+      <td>{{personne.dateNaiss}}</td>
+      <td>{{personne.lieu}}</td>
+      <td>{{personne.nature}}</td>
+      <td>{{personne.classe}}</td>
+      <td>{{personne.telephone}}</td>
+      <td>{{personne.cin}}</td>
+      <td>{{personne.delivreCin}}</td> 
+      <td>{{personne.lieuCin}}</td>
+      <td>{{personne.matriculeFiscal}}</td>
+       <td>{{personne.adressePhysique}}</td>
+      <td>{{personne.siege}}</td>
+      <td>{{personne.mentionEnregistrement}}</td>
+      <td> <button type="button" class="btn btn-light mr-l" > Éditer </button></td>
+      <td> <button type="button" class="btn btn-light mr-l" > Supprimer </button></td>
+    </tr>
+    <tr>
+    
+    </table>
